@@ -34,6 +34,6 @@ jobs:
             CONAN_TOTAL_PAGES: 2
             CONAN_BUILD_TYPES: ${{matrix.buildType}}
             MINGW_CONFIGURATIONS: ${{matrix.mingwVersion}}@${{matrix.arch}}@${{matrix.exceptions}}@${{matrix.threads}}
-            CONAN_OPTIONS:  "harfbuzz:with_glib=False"
+            CONAN_OPTIONS:  "harfbuzz:with_glib=False,qt:qtdeclarative=True,qt:qtmultimedia=True,qt:qttools=True,qt:qttranslations=True,qt:qtdoc=True,qt:qtrepotools=True,qt:qtqa=True,qt:qtquickcontrols2=True,qt:with_openal=False"
         run: |
             python build.py
