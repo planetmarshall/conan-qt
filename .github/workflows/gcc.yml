@@ -16,6 +16,7 @@ jobs:
             fetch-depth: 1
       - name: install
         run: |
+          sudo apt-get install python3-setuptools
           chmod +x .ci/install.sh
           ./.ci/install.sh
       - name: run
